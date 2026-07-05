@@ -11,7 +11,7 @@
 
 
 //input buffer that is prepared by gamethread before sending to async thread
-struct MYPROJECT2_API AsyncCallBackInput : public Chaos::FSimCallbackInput
+struct MY_PROJECT_NAME_API AsyncCallBackInput : public Chaos::FSimCallbackInput
 {
 	int gameTick;
 
@@ -23,7 +23,7 @@ struct MYPROJECT2_API AsyncCallBackInput : public Chaos::FSimCallbackInput
 
 
 //output buffer that is prepared by async thread and sent to gamethread
-struct MYPROJECT2_API AsyncCallBackOutput : public Chaos::FSimCallbackOutput
+struct MY_PROJECT_NAME_API AsyncCallBackOutput : public Chaos::FSimCallbackOutput
 {
 	int gameTick;
 	int asyncTick;
@@ -36,7 +36,7 @@ struct MYPROJECT2_API AsyncCallBackOutput : public Chaos::FSimCallbackOutput
 
 
 //callback class for handling async calculations
-class MYPROJECT2_API AsyncCallBack : public Chaos::TSimCallbackObject<AsyncCallBackInput, AsyncCallBackOutput>
+class MY_PROJECT_NAME_API AsyncCallBack : public Chaos::TSimCallbackObject<AsyncCallBackInput, AsyncCallBackOutput>
 {
 	//called before physics integration
 	virtual void OnPreSimulate_Internal() override;
@@ -48,7 +48,7 @@ class MYPROJECT2_API AsyncCallBack : public Chaos::TSimCallbackObject<AsyncCallB
 
 
 UCLASS()
-class MYPROJECT2_API AAsyncExample : public AActor
+class MY_PROJECT_NAME_API AAsyncExample : public AActor
 {
 	GENERATED_BODY()
 
